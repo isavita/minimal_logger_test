@@ -25,7 +25,7 @@ defmodule MinimalLoggerTest.MixProject do
       {:bandit, "~> 1.8"},
       {:plug, "~> 1.15"},
       {:jason, "~> 1.4"},
-      {:logger_file_backend, "~> 0.0.13"}
+      {:logger_backends, "~> 1.0"}
     ]
   end
 end

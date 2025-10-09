@@ -24,6 +24,6 @@ defmodule BanditCrashReasonTest do
     IO.puts("============================================\n")
 
     refute log =~ "crash_reason",
-      "crash_reason should not appear when only [:request_id] is configured"
+           "crash_reason should not appear when only [:request_id] is configured"
   end
 end

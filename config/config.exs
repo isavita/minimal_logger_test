@@ -1,10 +1,20 @@
 import Config
 
 config :logger,
-  backends: [{LoggerFileBackend, :file}]
+  backends: []
 
-config :logger, :file,
-  path: "/tmp/bandit_test.log",
-  format: {MinimalLoggerTest.Formatter, :format},
-  metadata: :all,
+config :logger, :default_handler,
   level: :error
+
+config :logger, :default_formatter,
+  format: {MinimalLoggerTest.Formatter, :format},
+  metadata: :all
+
+config :logger, :file_handler,
+  level: :error,
+  config: %{
+    file: ~c"/tmp/bandit_test.log",
+    type: :standard_io
+  },
+  formatter: {MinimalLoggerTest.Formatter, :format},
+  metadata: :all
