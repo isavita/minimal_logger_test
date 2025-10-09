@@ -6,5 +6,5 @@ config :logger,
 config :logger, :file,
   path: "/tmp/bandit_test.log",
   format: {MinimalLoggerTest.Formatter, :format},
-  metadata: [:request_id],
+  metadata: :all,
   level: :error
